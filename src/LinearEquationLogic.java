@@ -30,15 +30,13 @@ public class LinearEquationLogic {
         stringToInt();
         System.out.println();
         LinearEquation linearEquation = new LinearEquation(x1,y1,x2,y2);
-        linearEquation.lineInfo();
+        System.out.println(linearEquation.lineInfo());
         System.out.println();
         if (x1 != x2) {
-            askingforCoord();
+           askingForCoord();
             System.out.println();
-            linearEquation.coordinateForX(x);
+            System.out.println(linearEquation.coordinateForX(x));
         }
-
-
         System.out.println();
         newCoord();
         System.out.println();
@@ -50,7 +48,7 @@ public class LinearEquationLogic {
     }
 
 
-    private void askingforCoord() {
+    private void askingForCoord() {
         System.out.print("Enter a value for x: ");
         x = scan.nextDouble();
         scan.nextLine();
@@ -75,9 +73,9 @@ public class LinearEquationLogic {
         int idx1 = coord1.indexOf(",");
         int idx2 = coord2.indexOf(",");
         x1 = Integer.parseInt(coord1.substring(1,idx1));
-        y1 = Integer.parseInt(coord1.substring(idx1 + 1, coord1.length()-1));
+        y1 = Integer.parseInt(coord1.substring(idx1 + 2, coord1.length()-1));
         x2 = Integer.parseInt(coord2.substring(1,idx2));
-        y2 = Integer.parseInt(coord2.substring(idx2 + 1, coord2.length()-1));
+        y2 = Integer.parseInt(coord2.substring(idx2 + 2, coord2.length()-1));
     }
 
 
@@ -98,21 +96,5 @@ public class LinearEquationLogic {
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
